@@ -1,0 +1,19 @@
+services:
+  backend:
+    build: ./backend
+    environment:
+      OUTPUT_DIR: /downloads
+    volumes:
+      - ${DOWNLOAD_DIR:-./downloads}:/downloads
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "${PORT:-80}:80"
+    environment:
+      AUTH_USER: ${AUTH_USER:-}
+      AUTH_PASS: ${AUTH_PASS:-}
+    depends_on:
+      - backend
+    restart: unless-stopped

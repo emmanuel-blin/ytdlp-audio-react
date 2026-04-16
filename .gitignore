@@ -1,0 +1,32 @@
+# Node.js
+node_modules/
+dist/
+dist-ssr/
+build/
+*.log
+
+# Environment Files
+.env
+.env.local
+.env.*.local
+!.env.exemple
+
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE Settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Project Specific
+downloads/
+backend/node_modules/
+frontend/node_modules/
+
+# Existing Project Entries
+.ideas/doc.md
+.ideas/Todo.md
